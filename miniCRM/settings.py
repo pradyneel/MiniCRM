@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ll20q%^kj-@12$12u$e9ntxpealcacgg0#@^1rp^^hdc-a2s(z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['crm-mini.herokuapp.com', '127.0.0.1']
 
 
 # Application definition

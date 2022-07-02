@@ -32,7 +32,7 @@ Designed the miniCrm web app using:
     
     
    - Add Contact.<br><br><br>
-    ![index](https://github.com/pradyneel/MiniCRM/blob/main/images/add contact.png)
+    ![index](https://github.com/pradyneel/MiniCRM/blob/main/images/addcontact.png)
     <br>
     
    - Message.<br><br><br>
@@ -44,7 +44,7 @@ Designed the miniCrm web app using:
     <br>
     
    - AddTask.<br><br><br>
-    ![index](https://github.com/pradyneel/MiniCRM/blob/main/images/add task.png)
+    ![index](https://github.com/pradyneel/MiniCRM/blob/main/images/addtask.png)
     <br>
     
     

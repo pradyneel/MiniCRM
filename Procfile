@@ -1,1 +1,1 @@
-web: gunicorn minicrm.wsgi:application
+web: gunicorn miniCRM.wsgi:application

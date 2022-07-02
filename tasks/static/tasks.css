@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    background: white;
+    position: relative;
+    display: flex;
+}
+
+#sidebar-menu {
+    background-color: #045de9;
+    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#sidebar-menu .logo h2 {
+    color: black;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 45px;
+    margin: 18px 10px 0 25px;
+}
+
+#sidebar-menu .menuitems {
+    margin-top: 40px;
+}
+
+#sidebar-menu .menuitems li {
+    list-style: none;
+    padding: 15px 0;
+    transition: 0.3 ease;
+}
+
+#sidebar-menu .menuitems li:hover {
+    background-color: #63a4ff;
+    background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#sidebar-menu .menuitems li:nth-child(5) {
+    border-left: 4px solid #fff;
+}
+
+#sidebar-menu .menuitems li:hover i,
+#sidebar-menu .menuitems li:hover a {
+    color: black;
+}
+
+#sidebar-menu .menuitems li i {
+    color: white;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 10px 0 25px;
+
+
+}
+
+#sidebar-menu .menuitems li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 300px;
+    transition: 0.3 ease;
+}
+
+#interface {
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    position: relative;
+}
+
+#interface .topmenu {
+    display: flex;
+    width: calc(100% - 300px);
+    align-items: center;
+    justify-content: space-between;
+    background: #ffff;
+    padding: 15px 30px;
+
+    position: fixed;
+
+}
+
+#interface .topmenu .title {
+    flex: 80%;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+#interface .topmenu .profile {
+    flex: 10%;
+}
+
+.n1 {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+#interface .topmenu .profile i {
+    margin-right: 20px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+#menu-btn {
+    display: none;
+    color: beige;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+
+}
+
+.profile ul li {
+    list-style: none;
+
+}
+
+
+
+.dropbtn {
+    background-color: #48c3eb;
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    border-radius: 10px;
+
+
+}
+
+.heading {
+    width: calc(100% - 280px);
+    margin: 100px 0px 0px 130px;
+    font-size: 30px;
+}
+
+.heading2 {
+    width: calc(100% - 280px);
+    margin: 10px 0px 0px 130px;
+    font-size: 30px;
+
+
+}
+
+
+
+
+/* Status tag */
+
+.tag {
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 20px;
+}
+
+.tag.COMPLETED {
+    background-color: green;
+    text-decoration-color: black;
+    color: #fff;
+}
+
+.tag.pending {
+    background-color: #ece7fe;
+    color: #8972f3;
+}
+
+
+.upcoming {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+/* completed form end*/
+.board {
+    width: calc(100% - 280px);
+    height: 220px;
+    margin: 10px 40px 0px 130px;
+    overflow: scroll;
+    background: #FAF6F6;
+    border-radius: 8px;
+
+}
+
+.board h5 {
+    font-weight: 400;
+    font-size: 15px;
+
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 1px solid #fff;
+}
+
+thead td {
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 500;
+    background: #738bdc;
+    text-align: start;
+    padding: 18px;
+}
+
+tbody .secondtr {
+    background-color: #48c3eb;
+}
+
+
+
+tbody tr td {
+    padding: 10px 15px;
+
+
+}
+
+/* completed form end*/
+.board2 {
+    width: calc(100% - 280px);
+    height: 220px;
+    margin: 10px 20px 0px 130px;
+    overflow: scroll;
+    background: #FAF6F6;
+    border-radius: 8px;
+
+}
+
+.board2 h5 {
+    font-weight: 400;
+    font-size: 15px;
+
+}
+
+/* Add task pop up*/
+.open-button {
+    background-color: #09C6F9;
+    color: white;
+    padding: 20px 50px;
+    margin: 10px 20px 0px 100px;
+    border-radius: 20px;
+    cursor: pointer;
+    opacity: 0.8;
+
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+    margin: 10px 20px 0px 130px;
+
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 50px;
+    border-radius: 20px;
+    z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 400px;
+    padding: 10px;
+    background-color: #48dbfb;
+    background-image: linear-gradient(315deg, #48dbfb 0%, #d3d3d3 74%);
+
+
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+/* Full-width input fields */
+.form-container input[type=text],
+.form-container input[type=date] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus,
+.form-container input[type=date]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.form-container .btn {
+    background-color: #045DE9;
+    ;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.form-container .cancel {
+    background-color: red;
+}
+
+/* Add some hover effects to buttons */
+
+.form-container .btn:hover {
+    background-color: #09C6F9;
+}
+
+.open-button:hover {
+    background-color: #045DE9;
+}
+
+
+.completed:hover span{
+    display: none;
+}
+.completed:hover:before{
+    content: "completed";
+    text-transform: uppercase;
+}
+
+.tag.pending:hover{
+    background-color: red;
+}
+
+
+
+
+
+
+@media(max-width:760px) {
+
+    #sidebar-menu {
+
+        width: 270px;
+
+        position: fixed;
+        left: -270px;
+
+    }
+
+    #sidebar-menu.active {
+        left: 0px;
+    }
+
+    #menu-btn {
+        display: initial;
+    }
+
+    #interface {
+        width: 100%;
+        margin-left: 0px;
+        display: inline-block;
+    }
+
+    #sidebar-menu.active~#interface {
+        width: calc(100%-270px);
+        margin-left: 270px;
+    }
+
+    #interface .topmenu {
+        width: 100%;
+    }
+
+    .values {
+        justify-content: flex-start;
+        padding: 40px 40px 0 40px;
+
+
+
+    }
+
+    .values .valuebox {
+        margin: 10px 20px 10px 0;
+
+        padding: 20px 18px;
+
+
+
+    }
+
+}

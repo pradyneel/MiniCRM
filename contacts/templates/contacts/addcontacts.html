@@ -1,0 +1,104 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{%static 'newcontacts.css' %}" alt="image" />
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <section id="sidebar-menu">
+        <div class="logo">
+            <h2>MiniCRM</h2>
+        </div>
+
+        <div class="menuitems">
+            <li><i class='bx bxs-dashboard'></i><a href="../home">Dashboard</a></li>
+            <li><i class='bx bxs-contact'></i><a href="../contacts">Contacts</a></li>
+            <li><i class='bx bxs-add-to-queue'></i><a href="../addcontact">Add contacts</a></li>
+            <li><i class='bx bxs-message-alt-edit'></i><a href="../message">Messages</a></li>
+            <li><i class='bx bx-task '></i></i><a href="../tasks">Tasks</a></li>
+            <li><i class='bx bx-exit'></i><a href="../logout">Logout</a></li>
+        </div>
+
+
+    </section>
+
+    <section id="interface">
+        <div class="topmenu">
+            <div class="n1">
+                <div>
+                    <i id="menu-btn" class='bx bx-menu'></i>
+                </div>
+                <div class="title">
+                   <h2> Add New Contacts</h2>
+                </div>
+                <div class="profile">
+                    <ul>
+                        <li>
+                            <div class="dropdown">
+                                <button class="dropbtn">{{ user.userCompany }}</button>
+                            </div>
+                    </ul>
+                    </li>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div>
+            <div class="container">
+                <form method="POST" id="my-form">
+                    {% csrf_token %}
+
+                    <div class="form-group">
+                        <label for="Name">Name</label>
+                        <input type="text" id="Name" name ="name" placeholder="Name">
+                    </div>
+
+                    <div class="form-group2">
+                        <label for="Company">Company</label>
+                        <input type="text" id="Company" name="company" placeholder="Company">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="role">Role </label>
+                        <input type="text" id="Role" name="role" placeholder="Role">
+                    </div>
+                    <div class="form-group2">
+                        <label for="phonenumber">Phone Number</label>
+                        <input type="number" id="Phone Number" name="phonenumber" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email">
+                    </div>
+
+                    <button type="submit" class="submit">Add Contact</button>
+                </form>
+            </div>
+        </div>
+        <div id="status"></div>
+    </section>
+
+    <script>
+        $('#menu-btn').click(function () {
+            $('#sidebar-menu').toggleClass("active");
+        })
+    </script>
+
+
+</body>
+
+</html>

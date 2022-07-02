@@ -1,0 +1,135 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{%static 'main/dashboard.css' %}" alt="styles" />
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <section id="sidebar-menu">
+        <div class="logo">
+            <h2>MiniCRM</h2>
+        </div>
+
+        <div class="menuitems">
+            <li><i class='bx bxs-dashboard'></i><a href="../home">Dashboard</a></li>
+            <li><i class='bx bxs-contact'></i><a href="../contacts">Contacts</a></li>
+            <li><i class='bx bxs-add-to-queue'></i><a href="../addcontact">Add contacts</a></li>
+            <li><i class='bx bxs-message-alt-edit'></i><a href="../message">Messages</a></li>
+            <li><i class='bx bx-task '></i></i><a href="../tasks">Tasks</a></li>
+            <li><i class='bx bx-exit'></i><a href="../logout">Logout</a></li>
+
+        </div>
+
+
+    </section>
+
+    <section id="interface">
+        <div class="topmenu">
+            <div class="n1">
+                <div>
+                    <i id="menu-btn" class='bx bx-menu'></i>
+                </div>
+                <div class="title">
+
+                    <h2 class="dashboard">Dashboard</h2>
+
+
+                </div>
+                <div class="profile">
+                    <ul>
+                        <li>
+
+                            <div class="dropdown">
+                                <button class="dropbtn">{{ user.userCompany }}</button>
+                                
+                            </div>
+                    </ul>
+                    </li>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="boards">
+            <div class="left">
+                <div class="info">
+                    <h3>Information</h3>
+                    <div class="info_data">
+                        <div class="data">
+                            <h4>User Name</h4>
+                            <p>{{ user.userName }}</p>
+                        </div>
+                        <div class="data" id="email">
+                            <h4>Email</h4>
+                            <p>{{ user.userEmail }}</p>
+                        </div>
+                        <div class="data">
+                            <h4>Company Name</h4>
+                            <p>{{ user.userCompany }}</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="right">
+
+
+                <div class="contacts">
+                    <h3>Projects</h3>
+                    <div class="contacts_data">
+                        <div class="data" id="contacts">
+                            <h4>Contacts</h4>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="data" id="pending">
+                            <h4>Pending Work</h4>
+                            <p>dolor sit amet.</p>
+                        </div>
+                        <div class="data" id="completed">
+                            <h4>Completed Work</h4>
+                            <p>dolor sit amet.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div> -->
+        </div>
+
+
+
+
+
+
+    </section>
+
+    <script>
+        $('#menu-btn').click(function () {
+            $('#sidebar-menu').toggleClass("active");
+        })
+
+
+        document.querySelector(".profile ul li").addEventListener("click", function () {
+            this.classList.toggle("active");
+        });
+    </script>
+
+
+</body>
+
+</html>

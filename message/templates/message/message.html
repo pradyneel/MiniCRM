@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{%static 'message.css' %}" alt="image" />
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <section id="sidebar-menu">
+        <div class="logo">
+            <!-- <img src="" alt=""> -->
+            <h2>MiniCRM</h2>
+        </div>
+
+        <div class="menuitems">
+            <li><i class='bx bxs-dashboard'></i><a href="../home">Dashboard</a></li>
+            <li><i class='bx bxs-contact'></i><a href="../contacts">Contacts</a></li>
+            <li><i class='bx bxs-add-to-queue'></i><a href="../addcontact">Add contacts</a></li>
+            <li><i class='bx bxs-message-alt-edit'></i><a href="../message">Messages</a></li>
+            <li><i class='bx bx-task '></i></i><a href="../tasks">Tasks</a></li>
+            <li><i class='bx bx-exit'></i><a href="../logout">Logout</a></li>
+
+        </div>
+
+
+    </section>
+
+    <section id="interface">
+        <div class="topmenu">
+            <div class="n1">
+                <div>
+                    <i id="menu-btn" class='bx bx-menu'></i>
+                </div>
+                <div class="title">
+                    <h2>Messages</h2>
+                </div>
+                <div class="profile">
+                    <ul>
+                        <li>
+                            <!-- <i class='bx bx-user'></i> -->
+
+                            <div class="dropdown">
+                                <button class="dropbtn">{{ user.userCompany }}</button>
+                               
+                            </div>
+                    </ul>
+                    </li>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="forms">
+
+            <form action="#" method="post">
+                {% csrf_token %}
+                <div class="dbl-field">
+                    <div class="field">
+                        <input type="text" name="email" placeholder="Enter email" id="sendTo">
+
+                    </div>
+
+
+                </div>
+                <div class="dbl-field">
+                    <div class="field">
+                        <input type="text" name="text" id="subject" placeholder="Enter your Subject">
+
+                    </div>
+
+                </div>
+                <div class="message">
+                    <textarea placeholder="Write your message" name="message" id="message"></textarea>
+
+                </div>
+                <div class="button-area">
+                    <button type="submit">Send Message</button>
+                    <span></span>
+                </div>
+            </form>
+        </div>
+
+
+    </section>
+
+    <script>
+        $('#menu-btn').click(function () {
+            $('#sidebar-menu').toggleClass("active");
+        })
+    </script>
+
+
+</body>
+
+</html>

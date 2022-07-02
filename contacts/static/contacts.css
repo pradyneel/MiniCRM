@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    background: white;
+    position: relative;
+    display: flex;
+}
+
+#sidebar-menu {
+    background-color: #045de9;
+    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#sidebar-menu .logo h2 {
+    color: black;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 45px;
+    margin: 18px 10px 0 25px;
+}
+
+#sidebar-menu .menuitems {
+    margin-top: 40px;
+}
+
+#sidebar-menu .menuitems li {
+    list-style: none;
+    padding: 15px 0;
+    transition: 0.3 ease;
+}
+
+#sidebar-menu .menuitems li:hover {
+    background-color: #63a4ff;
+    background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#sidebar-menu .menuitems li:nth-child(2) {
+    border-left: 4px solid #fff;
+}
+
+#sidebar-menu .menuitems li:hover i,
+#sidebar-menu .menuitems li:hover a {
+    color: black;
+}
+
+#sidebar-menu .menuitems li i {
+    color: white;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 10px 0 25px;
+
+
+}
+
+#sidebar-menu .menuitems li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 300px;
+    transition: 0.3 ease;
+}
+
+#interface {
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    position: relative;
+}
+
+#interface .topmenu {
+    display: flex;
+    width: calc(100% - 300px);
+    align-items: center;
+    justify-content: space-between;
+    background: #ffff;
+    padding: 15px 30px;
+    position: fixed;
+
+}
+
+form {
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2%;
+    width: 100%;
+}
+
+
+
+
+#interface .topmenu .title {
+    flex: 80%;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+#interface .topmenu .profile {
+    flex: 20%;
+}
+
+.n1 {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+
+#interface .topmenu .profile i {
+    margin-right: 20px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+#menu-btn {
+    display: none;
+    color: beige;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+
+}
+
+
+
+
+
+.board {
+    width: calc(100% - 280px);
+    margin: 150px 40px 0px 130px;
+    overflow: auto;
+    background: #FAF6F6;
+    border-radius: 8px;
+
+}
+
+.board h5 {
+    font-weight: 400;
+    font-size: 15px;
+
+}
+
+table {
+    border-collapse: collapse;
+    display: block;
+    height: 450px;
+}
+
+tr {
+    border-bottom: 1px solid #fff;
+}
+
+thead td {
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 500;
+    background-color: #738bdc;
+
+    text-align: start;
+    padding: 18px;
+}
+
+tbody .secondtr {
+    background-color: #48c3eb;
+}
+
+
+
+tbody tr td {
+    padding: 10px 15px;
+
+
+}
+
+
+
+@media(max-width:760px) {
+
+    #sidebar-menu {
+
+        width: 270px;
+
+        position: fixed;
+        left: -270px;
+
+    }
+
+    #sidebar-menu.active {
+        left: 0px;
+    }
+
+    #menu-btn {
+        display: initial;
+    }
+
+    #interface {
+        width: 100%;
+        margin-left: 0px;
+        display: inline-block;
+    }
+
+    #sidebar-menu.active~#interface {
+        width: calc(100%-270px);
+        margin-left: 270px;
+    }
+
+    #interface .topmenu {
+        width: 100%;
+    }
+
+    .values {
+        justify-content: flex-start;
+        padding: 40px 40px 0 40px;
+
+
+
+    }
+
+    .values .valuebox {
+        margin: 10px 20px 10px 0;
+
+        padding: 20px 18px;
+
+
+
+    }
+
+}
+
+.profile ul li {
+    list-style: none;
+
+}
+
+
+.dropbtn .bx-user {
+    align-items: center;
+    margin-left: 8px;
+    justify-content: space-between;
+
+}
+
+.dropbtn {
+    background-color: #48c3eb;
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    border-radius: 10px;
+
+
+}
+
+
